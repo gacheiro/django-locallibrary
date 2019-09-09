@@ -25,12 +25,18 @@ class Book(models.Model):
                                help_text='Enter a brief description of the book')
     isbn = models.CharField('ISBN',
                             max_length=13,
-                            help_text='13 Character'
+                            help_text='13 Character '
                             '<a href="https://www.isbn-international.org/content/what-isbn">'
                             'ISBN number</a>')
     # ManyToManyField used because genre can contain many books. Books can cover many genres.
     # Genre class has already been defined so we can specify the object above.
     genre = models.ManyToManyField(Genre, help_text='Select a genre for this book.')
+
+    def display_genre(self):
+        """Create a string for the genre. This is required to display genre in Admin."""
+        return ', '.join(genre.name for genre in self.genre.all()[:3])
+    
+    display_genre.short_description = 'Genre'
 
     def __str__(self):
         return self.title
