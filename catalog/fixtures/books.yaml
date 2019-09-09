@@ -1,0 +1,41 @@
+- model: catalog.book
+  pk: 1
+  fields:
+    title: Amazing Science Fiction Book
+    author: 1
+    summary: This book is amazing
+    isbn: '9789295055025'
+    genre:
+    - 1
+    - 2
+
+- model: catalog.book
+  pk: 2
+  fields:
+    title: FooBar BarFoo
+    author: 3
+    summary: Foo Foo Foooooo, Bar Bar Baaaaaaar. FooBar
+    isbn: '9789295055000'
+    genre:
+    - 2
+
+- model: catalog.book
+  pk: 3
+  fields:
+    title: Amazing Science Fiction Book II
+    author: 1
+    summary: This book is amazing also
+    isbn: '9789295055026'
+    genre:
+    - 1
+    
+- model: catalog.book
+  pk: 4
+  fields:
+    title: Super Heroes Fantasy Book
+    author: 2
+    summary: This is a book about fantasy heroes
+    isbn: '9789295055444'
+    genre:
+    - 2
+    - 4

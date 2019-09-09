@@ -1,0 +1,119 @@
+- model: catalog.bookinstance
+  pk: 1cd7e3e7-4ffc-4fa4-aa42-20e42fb52f28
+  fields:
+    book: 2
+    imprint: Published April 1st 2019
+    due_back: 2019-09-09
+    status: o
+
+- model: catalog.bookinstance
+  pk: 240cd203-dc3d-458f-b8d5-b4e2bd9e4f58
+  fields:
+    book: 2
+    imprint: Published April 1st 2019
+    due_back: null
+    status: m
+
+- model: catalog.bookinstance
+  pk: 4fd631b7-ce24-421a-a613-c16325392c0a
+  fields:
+    book: 1
+    imprint: Published March 27th 1970
+    due_back: 2019-09-09
+    status: o
+
+- model: catalog.bookinstance
+  pk: 7a6f89c0-ea15-45c4-a9cd-b2d2ce72a8ed
+  fields:
+    book: 3
+    imprint: Published March 27th 1971
+    due_back: 2009-09-09
+    status: o
+
+- model: catalog.bookinstance
+  pk: 88c3a733-b6c9-4729-aee4-68a39d33ca8d
+  fields:
+    book: 1
+    imprint: Published March 27th 1970
+    due_back: null
+    status: m
+
+- model: catalog.bookinstance
+  pk: 95ec4493-911d-407b-a006-f7437f28edaf
+  fields:
+    book: 3
+    imprint: Published March 27th 1971
+    due_back: null
+    status: m
+
+- model: catalog.bookinstance
+  pk: 9694ffa6-9ebe-4cc0-ad73-ae72c7dbf8d1
+  fields:
+    book: 2
+    imprint: Published April 1st 2019
+    due_back: null
+    status: r
+
+- model: catalog.bookinstance
+  pk: 9f933957-d61e-44b1-981a-fdad870ddc7c
+  fields:
+    book: 1
+    imprint: Published March 27th 1970
+    due_back: null
+    status: r
+
+- model: catalog.bookinstance
+  pk: 9ffbd0f3-d0d3-4c82-8917-409c4ec317fc
+  fields:
+    book: 4
+    imprint: Published March 27th 2019
+    due_back: null
+    status: a
+    
+- model: catalog.bookinstance
+  pk: b8ca71aa-8c6f-4b07-8f65-c2406093300a
+  fields:
+    book: 1
+    imprint: Published March 27th 1970
+    due_back: null
+    status: a
+
+- model: catalog.bookinstance
+  pk: ba585b18-abeb-4cf9-8871-9db07205aa2b
+  fields:
+    book: 1
+    imprint: Published March 27th 1970
+    due_back: 2029-09-09
+    status: o
+
+- model: catalog.bookinstance
+  pk: c3dfab30-86a9-4194-b51d-2c16ef295956
+  fields:
+    book: 2
+    imprint: Published April 1st 2019
+    due_back: null
+    status: a
+
+- model: catalog.bookinstance
+  pk: f87b6c06-e070-4f99-9b0b-b8ef3617039f
+  fields:
+    book: 2
+    imprint: Published April 1st 2019
+    due_back: 2029-09-09
+    status: o
+
+- model: catalog.bookinstance
+  pk: fa6a3178-10e1-4b9c-acba-98b5f9a295b4
+  fields:
+    book: 4
+    imprint: Published March 27th 2019
+    due_back: null
+    status: r
+    
+- model: catalog.bookinstance
+  pk: fdb2dac4-3a39-4e54-b1cc-c5db793e7c1b
+  fields:
+    book: 3
+    imprint: Published March 27th 1971
+    due_back: null
+    status: m

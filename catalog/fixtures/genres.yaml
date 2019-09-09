@@ -1,0 +1,19 @@
+- model: catalog.genre
+  pk: 1
+  fields:
+    name: Science Fiction
+
+- model: catalog.genre
+  pk: 2
+  fields:
+    name: Fantasy
+
+- model: catalog.genre
+  pk: 3
+  fields:
+    name: Adventure
+    
+- model: catalog.genre
+  pk: 4
+  fields:
+    name: Super Heroes

@@ -5,7 +5,7 @@ from catalog.models import Author, Genre, Book, BookInstance
 
 class BooksInstanceInline(admin.TabularInline):
     model = BookInstance
-    extra = 0
+    extra = 1
 
 
 class BooksInline(admin.TabularInline):
