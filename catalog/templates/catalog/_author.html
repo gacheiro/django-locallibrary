@@ -1,5 +1,5 @@
-<h2 class="name">{{ author.first_name }} {{ author.last_name }}</h2>
-<p class="date-birth"><strong>Date of birth:</strong> {{ author.date_of_birth }}</p>
-{% if not author.alive %}
-<p class="date-death"><strong>Date of death:</strong> {{author.date_of_death}}</p>
+<h2 class="name">{{ object.first_name }} {{ object.last_name }}</h2>
+<p class="date-birth"><strong>Date of birth:</strong> {{ object.date_of_birth }}</p>
+{% if not object.alive %}
+<p class="date-death"><strong>Date of death:</strong> {{ object.date_of_death }}</p>
 {% endif %}

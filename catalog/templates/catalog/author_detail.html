@@ -6,7 +6,7 @@
 
 {% block content %}
   <div class="author" id="author-{{author.pk}}">
-    {% include "catalog/_author.html" %}
+    {% include "catalog/_author.html" with object=author %}
     <div class="instances">
       <h4>Books</h4>
       {% if author.book_set.all %}
