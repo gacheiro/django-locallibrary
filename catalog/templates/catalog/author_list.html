@@ -11,7 +11,9 @@
       <ul>
         {% for author in author_list %}
           <li class="author-info">
-            <a href="{{ author.get_absolute_url }}">{{ author }}</a>
+            <a href="{{ author.get_absolute_url }}">
+              {{ author }} ({{ author.date_of_birth }} - {{ author.date_of_death|default:"" }})
+            </a>
           </li>
         {% endfor %}
       </ul>
