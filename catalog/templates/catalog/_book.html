@@ -1,5 +1,5 @@
 <h2 class="title">Title: {{ object.title }}</h2>
-<p class="author"><strong>Author:</strong> <a href="">{{ object.author }}</a></p>
+<p class="author"><strong>Author:</strong> <a href="{{object.author.get_absolute_url}}">{{ object.author }}</a></p>
 <p><strong>Summary:</strong></p>
 <p class="summary">
   {{ object.summary }}

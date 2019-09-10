@@ -40,3 +40,13 @@ div.book-list {
 .book-instance .status {
     font-weight: bold;
 }
+
+/* author */
+
+.author {
+    margin-top: 20px;
+}
+
+.author .name {
+    margin-bottom: 20px; 
+}
