@@ -1,0 +1,9 @@
+<h2 class="title">Title: {{ object.title }}</h2>
+<p class="author"><strong>Author:</strong> <a href="">{{ object.author }}</a></p>
+<p><strong>Summary:</strong></p>
+<p class="summary">
+  {{ object.summary }}
+</p>
+<p class="isbn"><strong>ISBN:</strong> {{ object.isbn }}</p> 
+<p class="lang"><strong>Language:</strong> {{ object.language }}</p>  
+<p class="genre"><strong>Genre:</strong> {{ object.genre.all|join:", " }}</p>  

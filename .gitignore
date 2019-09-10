@@ -65,6 +65,7 @@ local.properties
 *.suo
 *.user
 *.sln.docstates
+.ionide
 
 # Build results
 

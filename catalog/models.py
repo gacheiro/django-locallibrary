@@ -69,6 +69,10 @@ class BookInstance(models.Model):
                               default='m',
                               help_text='Book availability')
     
+    @property
+    def availible(self):
+        return self.status == 'a'
+
     class Meta:
         ordering = ['due_back']
 

@@ -7,7 +7,7 @@
               text-warning{% endif %} status">
             {{ object.get_status_display }}
   </p>
-  {% if object.status != 'a' %}
+  {% if not object.availible %}
     <p class="dueback"><strong>Due to be returned:</strong> {{ object.due_back }}</p>
   {% endif %}
   <p class="imprint"><strong>Imprint:</strong> {{ object.imprint }}</p>
