@@ -1,5 +1,42 @@
+/* side bar */
+
 .sidebar-nav {
     margin-top: 20px;
     padding: 0px;
     list-style: none;
+}
+
+/* book list */
+
+div.book-list {
+    margin-top: 20px;
+}
+
+/* book */
+
+.book {
+    margin-top: 20px;
+}
+
+.book .title {
+    margin-bottom: 40px; 
+}
+
+.book .summary {
+    background: #ffffcc;
+    border-left: 2px solid #69c;
+    padding: 2px 10px;
+    max-width: 50em;
+    vertical-align: text-bottom;
+}
+
+.book .instances {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+/* book instance */
+
+.book-instance .status {
+    font-weight: bold;
 }

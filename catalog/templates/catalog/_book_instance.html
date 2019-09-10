@@ -1,0 +1,15 @@
+<div class="book-instance" id="book-instance-{{ object.id }}">
+  <p class="{% if object.status == 'a' %}
+              text-success
+            {% elif object.status == 'm' %}
+              text-danger
+            {% else %}
+              text-warning{% endif %} status">
+            {{ object.get_status_display }}
+  </p>
+  {% if object.status != 'a' %}
+    <p class="dueback"><strong>Due to be returned:</strong> {{ object.due_back }}</p>
+  {% endif %}
+  <p class="imprint"><strong>Imprint:</strong> {{ object.imprint }}</p>
+  <p class="text-muted"><strong>Id:</strong> {{ object.id }}</p>
+</div>
