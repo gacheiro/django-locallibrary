@@ -1,4 +1,4 @@
-<div class="book-instance" id="book-instance-{{ object.id }}">
+<li class="book-instance" id="book-instance-{{ object.id }}">
   <p class="{% if object.status == 'a' %}
               text-success
             {% elif object.status == 'm' %}
@@ -12,4 +12,4 @@
   {% endif %}
   <p class="imprint"><strong>Imprint:</strong> {{ object.imprint }}</p>
   <p class="text-muted"><strong>Id:</strong> {{ object.id }}</p>
-</div>
+</li>

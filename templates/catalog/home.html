@@ -1,9 +1,7 @@
-{% extends "base_generic.html" %}
-
+{% extends 'layout.html' %}
 {% block title %}
-  {% include "_title.html" with prefix="Home" %} 
+  {% include 'includes/title.html' with prefix='Home' %}
 {% endblock %}
-
 {% block content %}
   <h1>Local Library Home</h1>
   <p>Welcome to LocalLibrary, a website developed by <em>Mozilla Developer Network</em>!</p>
@@ -15,5 +13,5 @@
     <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
     <li><strong>Authors:</strong> {{ num_authors }}</li>
   </ul>
-  {% include "_num_visits.html" %}
+  <p class="num-visits">You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.</p>
 {% endblock %}

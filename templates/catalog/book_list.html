@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block title %}
+  {% include 'includes/title.html' with prefix='All books' %}
+{% endblock %}
+{% block content %}
+  <div class="book-list">
+    <h2>Book List</h2>
+    <ul>
+    {% for book in book_list %}
+      <li class="book-info">
+        <a href="{{ book.get_absolute_url }}">{{ book.title }}</a> ({{book.author}})
+      </li>
+    {% empty %}
+      <p>There are no books in the library.</p>
+    {% endfor %}
+    </ul>
+ </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block title %}
+  {% include 'includes/title.html' with prefix='All authors' %}
+{% endblock %}
+{% block content %}
+  <div class="author-list">
+    <h2>Author List</h2>
+    <ul>
+    {% for author in author_list %}
+      <li class="author-info">
+        <a href="{{ author.get_absolute_url }}">
+          {{ author }} ({{ author.date_of_birth }} - {{ author.date_of_death|default:"" }})
+        </a>
+      </li>
+    {% empty %}
+      <p>There are no authors in the library.</p>
+    {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

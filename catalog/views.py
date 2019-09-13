@@ -4,7 +4,7 @@ from django.views import generic
 from catalog.models import Book, BookInstance, Author, Genre
 
 
-def index(request):
+def home(request):
     """View function for the home page of the site."""
     
     num_books = Book.objects.count()
@@ -23,7 +23,7 @@ def index(request):
         'num_visits': num_visits,
     }
 
-    return render(request, 'index.html', context=context)
+    return render(request, 'catalog/home.html', context=context)
 
 
 class BookListView(generic.ListView):

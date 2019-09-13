@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block title %}
+  {% include 'includes/title.html' with prefix=author.last_name %}
+{% endblock %}
+{% block content %}
+  <div class="author" id="author-{{author.pk}}">
+    <h2 class="name">Author: {{ author }}</h2>
+    <p>{{ author.date_of_birth }} - {{ author.date_of_death|default:"" }}</p>
+    <div>
+      {% with books=author.book_set.all %}
+        <h4>Books ({{ books.count }})</h4>
+        <ul class="book-list no-bullets">
+        {% for book in books %}
+          <li class="book" id="book-{{ book.pk }}">
+            <strong>
+              <a href="{{ book.get_absolute_url }}">{{ book }}</a> ({{ book.bookinstance_set.count }})
+            </strong>
+            <div class="summary">
+              {{ book.summary }}
+            </div>
+          </li>
+        {% empty %}
+          <p>There are no books from this author in the library.</p>
+        {% endfor %}
+        </ul>
+      {% endwith %}
+    </div>
+  </div>
+{% endblock %}

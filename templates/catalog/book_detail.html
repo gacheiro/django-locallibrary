@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block title %}
+  {% include 'includes/title.html' with prefix=book.title %}
+{% endblock %}
+{% block content %} 
+  <div class="book" id="book-{{book.pk}}">
+    <h2 class="title">Title: {{ book.title }}</h2>
+    <p class="author">
+      <strong>Author: </strong><a href="{{ book.author.get_absolute_url}} ">{{ book.author }}</a>
+    </p>
+    <p><strong>Summary:</strong>
+      <div class="summary">
+        {{ book.summary }}
+      </div>
+    </p>
+    <p class="isbn"><strong>ISBN:</strong> {{ book.isbn }}</p>
+    <p class="lang"><strong>Language:</strong> {{ book.language }}</p>
+    <p class="genre"><strong>Genre:</strong> {{ book.genre.all|join:", " }}</p>
+    <div>
+      {% with copies=book.bookinstance_set.all %}
+        <h4>Copies ({{ copies.count }}) </h4>
+        <ul class="book-instances no-bullets">
+        {% for copy in copies %}
+          <hr>
+          {% include "catalog/_book_instance.html" with object=copy %}
+        {% empty %}
+          <p>There are no copies of this book in the library.</p>
+        {% endfor %}
+        </ul>
+      {% endwith %}
+    </div>
+  </div>
+{% endblock %}
