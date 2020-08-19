@@ -1,7 +1,7 @@
 # Django Local Library Tutorial
 
 Tutorial de django da Mozilla Developer Network. É um app para gerenciar uma biblioteca. Ao longo do tutorial, fiz algumas mudanças como
-adicionar fixtures, por exemplo. O tutorial pode ser encontrado (aqui)[https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django].
+adicionar fixtures, por exemplo. O tutorial pode ser encontrado [aqui](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django).
 
 ## Instalando
 
