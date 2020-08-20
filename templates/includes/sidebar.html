@@ -1,7 +1,8 @@
 <ul class="sidebar-nav">
   {% if user.is_authenticated %}
   <li>Logged in as {{ user.get_username }}</li>
-      <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+      <li><a href="{% url 'my-borrowed' %}">My borrowed books</a></li>
+      <li><a href="{% url 'logout'%}">Logout</a></li>
   {% else %}
       <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
   {% endif %}
@@ -9,7 +10,9 @@
   <li><a href="{% url 'home' %}">Home</a></li>
   <li><a href="{% url 'books' %}">All books</a></li>
   <li><a href="{% url 'authors' %}">All authors</a></li>
-  {% if user.is_authenticated %}
-      <li><a href="{% url 'my-borrowed' %}">My borrowed books</a></li>
+  {% if user.is_staff %}
+  <hr>
+  <span>Staff</span>
+      <li><a href="{% url 'all-borrowed' %}">All borrowed</a></li>
   {% endif %}
 </ul>
