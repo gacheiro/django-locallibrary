@@ -13,7 +13,16 @@ class RenewBookForm(forms.ModelForm):
         model = BookInstance
         fields = ["due_back"]
 
-    due_back = forms.DateField(help_text="Enter a date between today and 4 weeks")
+    due_back = forms.DateField(help_text=_("Enter a date between today and 4 "
+                                           "weeks (default 3)"))
+
+    def __init__(self, *args, **kwargs):
+        # Set the default due back date (+ 3 weeks)
+        if "initial" not in kwargs:
+            proposed_renewal_date = datetime.date.today() \
+                                    + datetime.timedelta(weeks=3)
+            kwargs["initial"] = {"due_back": proposed_renewal_date}
+        super().__init__(*args, **kwargs)
 
     def clean_due_back(self):
         data = self.cleaned_data["due_back"]
