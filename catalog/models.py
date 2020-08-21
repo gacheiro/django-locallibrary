@@ -99,6 +99,7 @@ class Author(models.Model):
 
     class Meta:
         ordering = ['last_name', 'first_name']
+        permissions = (('can_manage_authors', 'Create, update, delete authors.'),)
 
     def get_absolute_url(self):
         """Returns the url to access a particular author instance."""

@@ -5,6 +5,7 @@
 {% block content %}
   <div class="author-list">
     <h2>Author List</h2>
+    <p><a href="{% url 'author-create' %}">register new author</a></p>
     <ul>
     {% for author in author_list %}
       <li class="author-info">

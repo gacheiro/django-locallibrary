@@ -48,6 +48,24 @@ class AuthorDetailView(generic.DetailView):
     model = Author
 
 
+class AuthorCreateView(PermissionRequiredMixin, generic.CreateView):
+    permission_required = 'catalog.can_manage_authors'
+    model = Author
+    fields = '__all__'
+
+
+class AuthorUpdateView(PermissionRequiredMixin, generic.UpdateView):
+    permission_required = 'catalog.can_manage_authors'
+    model = Author
+    fields = ['first_name', 'last_name', 'date_of_birth', 'date_of_death']
+
+
+class AuthorDeleteView(PermissionRequiredMixin, generic.DeleteView):
+    permission_required = 'catalog.can_manage_authors'
+    model = Author
+    success_url = reverse_lazy('authors')
+
+
 class LoanedBooksView(PermissionRequiredMixin, generic.ListView):
     """Generic class-based view listing all books on loan"""
     permission_required = 'catalog.can_mark_returned'
