@@ -2,9 +2,13 @@
 {% block title %}
   {% include 'includes/title.html' with prefix=book.title %}
 {% endblock %}
-{% block content %} 
+{% block content %}
   <div class="book" id="book-{{book.pk}}">
     <h2 class="title">Title: {{ book.title }}</h2>
+    {% if perms.can_manage_books %}
+    <p><a href="{% url 'book-update' book.pk %}">update</a>
+       <a href="{% url 'book-delete' book.pk %}">delete</a></p>
+    {% endif %}
     <p class="author">
       <strong>Author: </strong><a href="{{ book.author.get_absolute_url}} ">{{ book.author }}</a>
     </p>

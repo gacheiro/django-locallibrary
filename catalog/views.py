@@ -39,6 +39,24 @@ class BookDetailView(generic.DetailView):
     model = Book
 
 
+class BookCreateView(PermissionRequiredMixin, generic.CreateView):
+    permission_required = 'catalog.can_manage_books'
+    model = Book
+    fields = '__all__'
+
+
+class BookUpdateView(PermissionRequiredMixin, generic.UpdateView):
+    permission_required = 'catalog.can_manage_books'
+    model = Book
+    fields = ['title', 'author', 'isbn', 'summary', 'genre']
+
+
+class BookDeleteView(PermissionRequiredMixin, generic.DeleteView):
+    permission_required = 'catalog.can_manage_books'
+    model = Book
+    success_url = reverse_lazy('books')
+
+
 class AuthorListView(generic.ListView):
     model = Author
     paginate_by = 2

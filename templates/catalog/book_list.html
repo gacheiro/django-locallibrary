@@ -5,6 +5,7 @@
 {% block content %}
   <div class="book-list">
     <h2>Book List</h2>
+    <p><a href="{% url 'book-create' %}">Register book</a></p>
     <ul>
     {% for book in book_list %}
       <li class="book-info">
